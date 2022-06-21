@@ -67,18 +67,55 @@ button {
 }
 
 
+/* ////Theme Changer//// */
 
-/* //////// */
 
-/* @media (max-width:380px) {
-    input{
-        width: 230px;
-    }
-    button {
-         width: 40px;
-        height: 40px; 
-        margin: 4px;
+/*Create button*/
 
-    }
+.toogle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e9f5ff;
+    border-radius: 50%;
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -5px -5px 12px white,
+        5px 5px 12px rgba(0, 0, 0, .16);
 
-} */
+}
+
+.toogle:before {
+    content: "\f186";
+    font-family: fontAwesome;
+}
+
+/* dark theme styling*/
+
+.container.dark .calculator .toogle:before {
+    content: "\f185";
+}
+
+.container.dark {
+    background-color: black;
+    transition: background 0.5s;
+}
+
+.container.dark .calculator {
+    background-color: #2b2b2b;
+    transition: background 0.5s;
+    box-shadow: inset 5px 5px 12px rgb(17, 16, 16), 5px 5px 12px rgba(0, 0, 0, .16);
+
+}
+
+.container.dark .calculator button,
+.container.dark .calculator .toogle,
+.container.dark .calculator input {
+    background-color: rgb(16, 17, 19);
+    box-shadow: inset -5px -5px 12px black,
+        inset 5px 5px 12px rgba(0, 0, 0, .16);
+    color: white;
+
+}

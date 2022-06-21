@@ -20,3 +20,11 @@ function Calculate(){
 }
 
 
+// Theme Changer
+
+
+var sec = document.querySelector('.container');
+var toogle = document.querySelector('.toogle');
+toogle.onclick = function () {
+  sec.classList.toggle('dark');
+}
